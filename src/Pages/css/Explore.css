@@ -1,0 +1,33 @@
+.explore-page h1 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.filters {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.filters button {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  transition: var(--transition);
+}
+
+.filters button:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.filters button.active {
+  background: var(--purple-primary);
+  color: white;
+}
+
+.songs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+}

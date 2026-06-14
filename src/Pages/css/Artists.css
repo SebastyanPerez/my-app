@@ -1,0 +1,100 @@
+.artists-page h1 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.artists-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1.5rem;
+}
+
+.artists-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.artists-sub {
+  color: var(--muted, #8a8a8a);
+  font-size: 0.95rem;
+}
+
+.artist-card {
+  background: var(--card-bg, #ffffff);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(20,20,20,0.06);
+  transition: transform 200ms ease, box-shadow 200ms ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 18px 12px 20px;
+  text-align: center;
+}
+
+.artist-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(20,20,20,0.12);
+}
+
+.artist-avatar {
+  position: relative;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #f3f3f3;
+  margin-bottom: 12px;
+}
+.artist-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Play overlay centered and hidden by default, visible on hover */
+.artist-avatar .play-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.0);
+  border-radius: 50%;
+  color: #fff;
+  opacity: 0;
+  transition: opacity 160ms ease, background 160ms ease, transform 160ms ease;
+}
+
+.artist-card:hover .artist-avatar .play-overlay {
+  opacity: 1;
+  background: rgba(0,0,0,0.35);
+  transform: scale(1.02);
+}
+
+.artist-info {
+  padding: 0 6px;
+}
+
+.artist-name {
+  font-size: 1rem;
+  margin: 6px 0 4px 0;
+  font-weight: 600;
+}
+
+.artist-listeners {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--muted, #8a8a8a);
+}
+
+@media (min-width: 900px) {
+  .artists-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}

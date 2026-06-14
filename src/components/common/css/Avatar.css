@@ -1,0 +1,27 @@
+.avatar {
+  border-radius: 50%;
+  background: linear-gradient(45deg, var(--purple-primary), var(--purple-secondary));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: white;
+}
+
+.avatar-small {
+  width: 40px;
+  height: 40px;
+  font-size: 1rem;
+}
+
+.avatar-medium {
+  width: 60px;
+  height: 60px;
+  font-size: 1.2rem;
+}
+
+.avatar-large {
+  width: 80px;
+  height: 80px;
+  font-size: 1.5rem;
+}

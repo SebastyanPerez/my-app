@@ -1,0 +1,16 @@
+.welcome-banner {
+  background: linear-gradient(to right, var(--purple-primary), var(--purple-secondary));
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.welcome-banner h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.welcome-banner p {
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 1.5rem;
+}

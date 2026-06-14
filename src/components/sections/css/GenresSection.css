@@ -1,0 +1,42 @@
+.genres-section {
+  margin-bottom: 3rem;
+}
+
+.genre-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.genre-card {
+  height: 120px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  padding: 0 1.5rem;
+  background: linear-gradient(to right, var(--purple-primary), var(--purple-secondary));
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.genre-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.genre-card:nth-child(2n) {
+  background: linear-gradient(to right, #ec4899, #f472b6);
+}
+
+.genre-card:nth-child(3n) {
+  background: linear-gradient(to right, #3b82f6, #60a5fa);
+}
+
+.genre-card:nth-child(4n) {
+  background: linear-gradient(to right, #10b981, #34d399);
+}
+
+.genre-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+}

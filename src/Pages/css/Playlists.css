@@ -1,0 +1,44 @@
+.playlists-page h1 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.playlists-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.create-playlist-form {
+  background: var(--black-secondary);
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+}
+
+.create-playlist-form input {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  outline: none;
+}
+
+.create-playlist-form input:focus {
+  border-color: var(--purple-primary);
+}
+
+.form-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.playlists-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+}

@@ -1,0 +1,191 @@
+@media (max-width: 1024px) {
+  .app-container {
+    grid-template-columns: 200px 1fr;
+  }
+  
+  .card-grid {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .app-container {
+    grid-template-areas: 
+      "header header"
+      "main main"
+      "player player";
+    grid-template-columns: 1fr;
+  }
+  
+  .sidebar {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    width: 70%;
+    max-width: 300px;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+  }
+  
+  .sidebar.open {
+    display: block;
+    transform: translateX(0);
+  }
+  
+  .menu-toggle {
+    display: block !important;
+  }
+  
+  .header {
+    padding: 0 1rem;
+  }
+  
+  .search-bar {
+    width: 60%;
+  }
+  
+  .welcome-banner h2 {
+    font-size: 1.5rem;
+  }
+  
+  .card-grid {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  }
+  
+  .artist-grid {
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  }
+  
+  .artist-avatar {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .song-info {
+    width: 40%;
+  }
+  
+  .extra-controls {
+    width: 20%;
+  }
+  
+  .volume-bar {
+    width: 60px;
+  }
+}
+
+@media (max-width: 640px) {
+  .search-bar {
+    width: 100%;
+    max-width: 200px;
+  }
+  
+  .user-actions {
+    gap: 1rem;
+  }
+  
+  .user-name {
+    display: none;
+  }
+  
+  .main-content {
+    padding: 1.5rem 1rem;
+  }
+  
+  .card-grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 1rem;
+  }
+  
+  .artist-grid {
+    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+    gap: 1rem;
+  }
+  
+  .artist-avatar {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .genre-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .song-info {
+    width: 50%;
+  }
+  
+  .song-thumbnail {
+    width: 45px;
+    height: 45px;
+  }
+  
+  .song-name {
+    font-size: 0.9rem;
+  }
+  
+  .song-artist {
+    font-size: 0.8rem;
+  }
+  
+  .control-buttons {
+    gap: 1rem;
+  }
+  
+  .control-buttons button {
+    font-size: 1rem;
+  }
+  
+  .play-button {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .extra-controls {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 0 0.5rem;
+  }
+  
+  .search-bar {
+    max-width: 160px;
+  }
+  
+  .welcome-banner {
+    padding: 1.5rem;
+  }
+  
+  .welcome-banner h2 {
+    font-size: 1.3rem;
+  }
+  
+  .section-title {
+    font-size: 1.3rem;
+  }
+  
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .artist-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .song-info {
+    width: 60%;
+  }
+  
+  .song-actions {
+    display: none;
+  }
+  
+  .progress-time {
+    font-size: 0.7rem;
+  }
+}
