@@ -1,7 +1,8 @@
 .btn {
-  padding: 0.75rem 1.5rem;
-  border-radius: 25px;
+  padding: 0.875rem 1.75rem;
+  border-radius: var(--radius-full);
   font-weight: 600;
+  font-size: 0.95rem;
   transition: var(--transition);
   border: none;
   cursor: pointer;
@@ -9,23 +10,82 @@
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.btn:active::before {
+  width: 300px;
+  height: 300px;
 }
 
 .btn-primary {
-  background-color: white;
-  color: var(--purple-primary);
+  background: linear-gradient(135deg, var(--purple-primary), var(--purple-secondary));
+  color: var(--text-primary);
+  box-shadow: var(--shadow-md);
 }
 
 .btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg), var(--shadow-purple);
+}
+
+.btn-primary:active {
+  transform: translateY(-1px);
 }
 
 .btn-secondary {
   background-color: rgba(255, 255, 255, 0.1);
   color: var(--text-primary);
+  border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .btn-secondary:hover {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.25);
+  transform: translateY(-2px);
+}
+
+.btn-secondary:active {
+  transform: translateY(0);
+}
+
+.btn-tertiary {
+  background: transparent;
+  color: var(--purple-primary);
+  border: 2px solid var(--purple-primary);
+}
+
+.btn-tertiary:hover {
+  background-color: rgba(139, 92, 246, 0.1);
+  transform: translateY(-2px);
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+.btn-sm {
+  padding: 0.5rem 1rem;
+  font-size: 0.85rem;
+}
+
+.btn-lg {
+  padding: 1rem 2.5rem;
+  font-size: 1.05rem;
 }

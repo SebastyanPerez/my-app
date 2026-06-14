@@ -1,16 +1,69 @@
 .welcome-banner {
-  background: linear-gradient(to right, var(--purple-primary), var(--purple-secondary));
-  border-radius: 12px;
-  padding: 2rem;
-  margin-bottom: 2rem;
+  background: linear-gradient(135deg, var(--purple-primary) 0%, var(--purple-secondary) 100%);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-xl);
+  margin-bottom: var(--spacing-xl);
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg), var(--shadow-purple);
+}
+
+.welcome-banner::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) translateX(0px);
+  }
+  25% {
+    transform: translateY(20px) translateX(-10px);
+  }
+  50% {
+    transform: translateY(30px) translateX(10px);
+  }
+  75% {
+    transform: translateY(10px) translateX(-5px);
+  }
 }
 
 .welcome-banner h2 {
-  font-size: 1.8rem;
-  margin-bottom: 0.5rem;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: var(--spacing-sm);
+  position: relative;
+  z-index: 1;
+  letter-spacing: -0.5px;
 }
 
 .welcome-banner p {
-  color: rgba(255, 255, 255, 0.8);
-  margin-bottom: 1.5rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: var(--spacing-lg);
+  position: relative;
+  z-index: 1;
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .welcome-banner {
+    padding: var(--spacing-lg);
+  }
+
+  .welcome-banner h2 {
+    font-size: 1.5rem;
+  }
+
+  .welcome-banner p {
+    font-size: 0.95rem;
+  }
 }
